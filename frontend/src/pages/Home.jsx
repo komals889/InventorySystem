@@ -63,23 +63,22 @@ export default function Home() {
             {
                 isloading
                     ? <div className="spinner spinner-border"></div>
-                    :bikeredux.map((item) => (
-                        <div className="col-sm-4 mt-3" key={item._id}>
-                                 <AllBike allData={item}/>
+                    :
+                    <div className="col-sm-9 mt-3" >
+                    <div className="row">{
+                      bikeredux.map((item) => (
+                        <div className="col-sm-4" key={item._id}>
+
+                         <AllBike allData={item}/>
                         </div>
-                    ))
-               }
+            ))
+        }
+        </div>
     </div>
-       </div>
-                    {
-                        isloading?
-                        <div className="spinner spinner-border"></div>:
-                        categoryDetails.map((item)=>{
-                            <div className="col-sm-4 mt-3" key={item._id}>
-                                <p>{item?.heading}</p>
-                                         <CategoryList categoryData={item}/>
-                                </div>
-                        })
-                    }
+               }
+      </div>
+    </div>
+                    
+                     
     </div>
 }
