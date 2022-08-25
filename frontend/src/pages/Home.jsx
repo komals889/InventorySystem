@@ -26,9 +26,9 @@ export default function Home() {
       setcategoryDetails(res)
     //   console.log(category)
     }
-    useEffect(()=>{
-      getData()
-    },[])
+    // useEffect(()=>{
+    //   getData()
+    // },[])
     let userId=userloginRedux?.info?._id
   const getCategory=async()=>{
         
