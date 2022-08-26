@@ -25,13 +25,11 @@ exports.signupUser = async (req, res) => {
 
 exports.updateProfile=async(req,res)=>{
     try {
-        let {password} = req.body
-        const salt = await bcrypt.genSalt(10)
-        password = await bcrypt.hash(password,salt)
+         
         const resutl = await signup.findByIdAndUpdate(req.params.id,{ 
             name: req.body.name,
             email: req.body.email,
-            password},{new:true})
+             },{new:true})
         res.json({
             message: "update Data",
             success: true,
