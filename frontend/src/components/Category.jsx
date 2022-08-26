@@ -32,6 +32,7 @@ export default function Category() {
         e.preventDefault()
         const {data}=await axios.put(`http://localhost:5000/api/v1/category/${id}`,{categoryName:name})
         console.log(data);
+        getCategory()
     }
     const updateData=(id)=>{
         setid(id)
