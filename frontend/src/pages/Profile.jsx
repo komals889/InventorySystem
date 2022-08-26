@@ -23,7 +23,7 @@ export default function Profile({history}) {
     }
     useEffect(()=>{
        getData()
-    },[updateData])
+    },[])
     const handleupdateData=async(id)=>{
       //  setuserid(id)
       console.warn(userid)
